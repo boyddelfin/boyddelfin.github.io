@@ -7,11 +7,301 @@
     <title>Boyd Delfin | Web Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="https://github.githubassets.com/favicons/favicon-dark.png">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/874c960786.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js" integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function () {
+            $('.menu li a').on('click', function(e){
+                e.preventDefault();
+                var target = $(this);
+
+                // Set Active Menu Link
+                target.addClass('active').parent().siblings('li').children('a').removeClass('active');
+                
+                // Set Active Page corresponsding to Active Menu Link
+                $(target.attr('href')).addClass('active').siblings('.pages').removeClass('active');
+
+            });
+        });
+    </script>
+    <style>
+        :root {
+            --color: 88, 53, 94;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome</h1>
-    <h2>Welcome</h2>
-    <span class="material-icons">verified</span>
+    <section class="portfolio-card">
+        <header>
+            <div class="portfolio-img">
+                <img src="boyd_delfin.jpg" alt="Boyd Delfin">
+            </div>
+            <div class="portfolio-details">
+                <h1 title="Virgilio A. Delfin Jr.">Boyd Delfin</h1>
+                <p>Web Developer</p>
+                <nav class="social-links">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/vadjr/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.raket.ph/vadjr" target="_blank"><i class="fa-solid fa-rocket"></i></a></li>
+                        <li><a href="https://github.com/boyddelfin" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="mailto:vadjr27@gmail.com" target="_blank"><i class="fa-brands fa-google"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#projects" class="active">Projects</a></li>
+                    <li><a href="#tech">Technology</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                </ul>
+            </nav>
+            <section class="pages active" id="projects">
+                <h3>Ongoing Projects</h3>
+                <ul class="items display-list" id="ongoing-projects">
+                    <li>
+                        <article>
+                            <img src="github-portfolio-thumbnail.png" alt="Project 1">
+                            <div class="details">
+                                <h2 class="title"><a href="https://boyddelfin.github.io" target="_blank">Github Portfolio</a></h2>
+                                <p class="description">Started: 09/16/2022</p>
+                                <p class="description">Ongoing</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <img src="github-portfolio-thumbnail.png" alt="Project 1">
+                            <div class="details">
+                                <h2 class="title"><a href="https://www.boyddelfin.com" target="_blank">WordPress Portfolio</a></h2>
+                                <p class="description">Started: 08/08/2022</p>
+                                <p class="description">Ongoing</p>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+                <h3>Finished Projects</h3>
+                <ul class="items display-list" id="ongoing-projects">
+                    <li>
+                        <article>
+                            <img src="github-portfolio-thumbnail.png" alt="Doc Guru">
+                            <div class="details">
+                                <h2 class="title"><a href="https://www.getdocguru.com" target="_blank">Doc Guru</a></h2>
+                                <p class="description">Started: 09/16/2022</p>
+                                <p class="description">Finished: 08/18/2022</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <img src="codepen-kop_v2.png" alt="KOP Point Calculator v2">
+                            <div class="details">
+                                <h2 class="title"><a href="https://codepen.io/vadjr/pen/NWgYgdq" target="_blank">KOP Point Calculator v2</a></h2>
+                                <p class="description">Started: 10/01/2021</p>
+                                <p class="description">Finished: 10/01/2021</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <img src="codepen-kop_v1.png" alt="Project 1">
+                            <div class="details">
+                                <h2 class="title"><a href="https://codepen.io/vadjr/pen/eYRedjZ" target="_blank">KOP Point Calculator</a></h2>
+                                <p class="description">Started: 09/17/2021</p>
+                                <p class="description">Finished: 08/17/2021</p>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+            <section class="pages" id="tech">
+                <h3>Expert</h3>
+                <ul class="items display-list">
+                    <li>
+                        <article>
+                            <div class="logo">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="details">
+                                <h2 class="title">HTML</h2>
+                                <p class="description">Hypertext Markup Language</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <div class="logo">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="details">
+                                <h2 class="title">CSS</h2>
+                                <p class="description">Cascading Stylesheet</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <div class="logo">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="details">
+                                <h2 class="title">jQuery</h2>
+                                <p class="description"> Open-sourced JavaScript library</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <div class="logo">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="details">
+                                <h2 class="title">JSON</h2>
+                                <p class="description">JavaScript Object Notation</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <div class="logo">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="details">
+                                <h2 class="title">PHP</h2>
+                                <p class="description">PHP Hypertext Preprocessor</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <div class="logo">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <div class="details">
+                                <h2 class="title">MySQL</h2>
+                                <p class="description">Structured Query Language</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <div class="logo">
+                                <i class="fa-solid fa-window-restore"></i>
+                            </div>
+                            <div class="details">
+                                <h2 class="title">WordPress</h2>
+                                <p class="description">Content Management System</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <div class="logo">
+                                <i class="fa-solid fa-window-restore"></i>
+                            </div>
+                            <div class="details">
+                                <h2 class="title">Divi Builder</h2>
+                                <p class="description">WordPress Page Builder</p>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+                <h3>Still Working On</h3>
+                <ul class="items display-list">
+                    <li>
+                        <article>
+                            <div class="logo">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="details">
+                                <h2 class="title">JavaScript</h2>
+                                <p class="description">A dynamic programming language that's used for web development.</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <div class="logo">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="details">
+                                <h2 class="title">Laravel</h2>
+                                <p class="description">A PHP web application framework</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <div class="logo">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="details">
+                                <h2 class="title">Flutter</h2>
+                                <p class="description">Create Multi-platform applications from a single codebase</p>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+            <section class="pages" id="experience">
+                <ul class="items display-list">
+                    <li>
+                        <article>
+                            <div class="logo">
+                                <i class="fa-solid fa-mug-hot"></i>
+                            </div>
+                            <div class="details">
+                                <h2 class="title">Freelace Web Developer</h2>
+                                <p class="company">Upwork</p>
+                                <p class="start">From: 08/2022</p>
+                                <p class="end">Ongoing</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <div class="logo">
+                                <i class="fa-solid fa-house"></i>
+                            </div>
+                            <div class="details">
+                                <h2 class="title">WordPress Developer</h2>
+                                <p class="company">Codezpace PH</p>
+                                <p class="start">From: 08/2020</p>
+                                <p class="end">To: 07/2022</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <div class="logo">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <div class="details">
+                                <h2 class="title">Web Developer</h2>
+                                <p class="company">Night Birds Solutions</p>
+                                <p class="start">From: 12/2018</p>
+                                <p class="end">To: 06/2020</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <div class="logo">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <div class="details">
+                                <h2 class="title">IT Trainee</h2>
+                                <p class="company">Transcom Bacolod</p>
+                                <p class="start">From: 11/2017</p>
+                                <p class="end">To: 01/2018</p>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer><a href="Virgilio_A_Delfin_Jr_CV.pdf" class="download-cv" download>Download CV</a></footer>
+    </section>
 </body>
 </html>
