@@ -1,3 +1,6 @@
+:root {
+    --color: 88, 53, 94;
+}
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +17,21 @@ body {
 }
 img {
     max-width: 100%;
+}
+
+/* Color Theme */
+.color-theme {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.color-theme button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--change-color);
+    border: 1px solid var(--change-color);
 }
 
 /* Portfolio Card */
@@ -88,7 +106,6 @@ img {
     font-size: 24px;
     line-height: 1.4em;
     letter-spacing: 2px;
-    color: rgba(var(--color), 0.5);
 }
 
 /* Social links */
@@ -186,7 +203,7 @@ img {
     object-fit: contain;
     object-position: center;
     border-radius: 8px;
-    box-shadow: 5px 0 35px rgba(var(--color), 0.2);
+    box-shadow: 5px 0 35px rgba(var(--color), 0.3);
 }
 .items.display-list article .details {
     width: 100%;
@@ -266,8 +283,7 @@ img {
 }
 .details .description {
     font-family: monospace;
-    font-size: 14px;
-    color: rgba(var(--color), 1);
+    font-size: 16px;
 }
 
 /* Footer */

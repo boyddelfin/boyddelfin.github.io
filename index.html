@@ -8,31 +8,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="https://github.githubassets.com/favicons/favicon-dark.png">
     <script src="https://kit.fontawesome.com/874c960786.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js" integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        $(function () {
-            $('.menu li a').on('click', function(e){
-                e.preventDefault();
-                var target = $(this);
-
-                // Set Active Menu Link
-                target.addClass('active').parent().siblings('li').children('a').removeClass('active');
-                
-                // Set Active Page corresponsding to Active Menu Link
-                $(target.attr('href')).addClass('active').siblings('.pages').removeClass('active');
-
-            });
-        });
-    </script>
-    <style>
-        :root {
-            --color: 88, 53, 94;
-        }
-    </style>
 </head>
 <body>
     <section class="portfolio-card">
         <header>
+            <div class="color-theme">
+                <button class="color" data-hex="#58355E" style="--change-color:#58355E" title="English Violet"></button>
+                <button class="color" data-hex="#ec0b43" style="--change-color:#ec0b43" title="Red Crayola"></button>
+                <button class="color" data-hex="#483D3F" style="--change-color:#483D3F" title="Black Coffee"></button>
+                <button class="color" data-hex="#058ED9" style="--change-color:#058ED9" title="Green Blue Crayola"></button>
+                <button class="color" data-hex="#47A025" style="--change-color:#47A025" title="Slimy Green"></button>
+            </div>
             <div class="portfolio-img">
                 <img src="boyd_delfin.jpg" alt="Boyd Delfin">
             </div>
@@ -292,5 +278,36 @@
             <a href="https://www.upwork.com/freelancers/~01fd592dfae808a046" class="btn download-cv">Hire Me on Upwork</a>
         </footer>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function () {
+
+            $('.menu li a').on('click', function(e){
+                e.preventDefault();
+                var target = $(this);
+
+                // Set Active Menu Link
+                target.addClass('active').parent().siblings('li').children('a').removeClass('active');
+                
+                // Set Active Page corresponsding to Active Menu Link
+                $(target.attr('href')).addClass('active').siblings('.pages').removeClass('active');
+
+            });
+
+            $('.color-theme .color').on('click', function(){
+
+                var hex = $(this).attr('data-hex');
+                var filter = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i;
+                var result = filter.exec(hex);
+                var red = parseInt(result[1], 16);
+                var green = parseInt(result[2], 16);
+                var blue = parseInt(result[3], 16);
+                var rgb =  red + ', ' + green + ', ' + blue;
+
+                $(':root').css('--color', rgb);
+            });
+            
+        });
+    </script>
 </body>
 </html>
