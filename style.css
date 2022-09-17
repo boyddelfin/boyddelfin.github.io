@@ -32,6 +32,7 @@ img {
     border-radius: 50%;
     background-color: var(--change-color);
     border: 1px solid var(--change-color);
+    cursor: pointer;
 }
 
 /* Portfolio Card */
